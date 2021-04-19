@@ -1,0 +1,23 @@
+.posts-box{
+    display: inline-block;
+    width:60%;
+    height: auto;
+}
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 8vh;
+    border-radius: 30px;
+    transition: all ease 0.4s;
+    justify-content: center;
+}
+.post:hover{
+    box-shadow: 0px 2px 5px rgba( 0, 0, 0, .4 );
+}
+.author{
+    transition: all 0.4s ease;
+}
+.post:hover>.author {
+    color: rgb(197, 53, 53);
+}

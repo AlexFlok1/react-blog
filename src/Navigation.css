@@ -1,0 +1,38 @@
+#NAV{
+    display: flex;
+    width: 100%;
+    height: 8vh;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+#NAV>ul{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+    height: 100%;
+    width: 80%;
+    padding: 0 20px;
+    margin:0;
+}
+#NAV>ul>li{
+    display: inline;
+}
+#NAV>ul>li>a{
+    color: black;
+    padding: 12px 12px;
+    text-align: center;
+    transition: all .4s ease;
+    text-decoration: none;
+}
+#NAV>ul>li>a:hover{
+    color: rgb(197, 53, 53);
+}
+
+/*TEXT ON THE LEFT*/
+.leftText{
+    display: inline-flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
