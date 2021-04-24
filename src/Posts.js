@@ -1,13 +1,19 @@
 import './Posts.css'
+import { useEffect, useState } from 'react'
 
-const Posts = ( { posts } ) => {
+const Posts = ( props ) => {
+
+   const [ allposts, setPosts ] = useState( null )
+
+   useEffect( () => {
+        setPosts( props.posts )
+   }, [ props ] )
 
     return(
-        
         <div className="posts-box">
             <h3>My Posts</h3>
             {
-                posts.map( post => (
+                allposts && allposts.map( post => (
                     <div className="post" key={ post.id }>
                        <p 
                        style={ 

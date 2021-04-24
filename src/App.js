@@ -17,12 +17,17 @@ let App = () => {
     //here needs to be fetch request
      setPosts(
        [
-        { "name": "post1", "author": "Alex Flok", "id": 1 },
-        { "name": "post1", "author": "Alex Flok", "id": 2 },
-        { "name": "post1", "author": "Alex Flok", "id": 3 }
+        { "name": "post1", "content":"", "author": "Alex Flok", "id": 1 },
+        { "name": "post1", "content":"", "author": "Alex Flok", "id": 2 },
+        { "name": "post1", "content":"", "author": "Alex Flok", "id": 3 }
       ]
   )
   }, [] )
+
+  const updateData = ( posts ) => {
+      console.log(posts);
+      setPosts( posts );
+  }
   
   return (
     <div className="App">
@@ -34,7 +39,7 @@ let App = () => {
                   { posts && <Posts posts={ posts } /> }
               </Route>
               <Route exact path='/newpost'>
-                  <NewPost />
+                  {posts && <NewPost posts={ posts } addPost={ updateData } />}
               </Route>
           </Switch>
         </div>
