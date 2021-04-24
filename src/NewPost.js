@@ -21,6 +21,7 @@ let NewPost = ( { posts, addPost } ) => {
     return(
         <div className="newPostPage">
             <h3>New Post</h3>
+            <br></br>
             <form className='formBox' onSubmit={createPost}>
                 <label className="af-form-element">Post Name</label>
                 <input 
